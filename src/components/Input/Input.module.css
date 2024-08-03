@@ -1,0 +1,21 @@
+.inputGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--medium);
+}
+.input {
+  width: 100%;
+  padding: var(--small);
+  margin-top: var(--x-small);
+  border-radius: var(--x-small);
+  border: 1px solid var(--color-primary-gey3);
+  background-color: var(--color-primary-lightgrey3);
+}
+
+@media (prefers-color-scheme: light) {
+  .input {
+    border-color: var(--color-primary-lightgrey2);
+  }
+}

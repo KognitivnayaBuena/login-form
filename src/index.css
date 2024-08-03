@@ -1,0 +1,100 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --color-primary-gey1: rgb(17 24 39);
+  --color-primary-gey2: rgb(31 41 55);
+  --color-primary-gey3: rgb(107 114 128);
+
+  --color-primary-lightgrey1: rgb(249 250 251);
+  --color-primary-lightgrey2: rgb(209 213 219);
+  --color-primary-lightgrey3: rgb(255 255 255 / 0.05);
+
+  --color-primary-green1: rgba(19, 255, 128);
+
+  --color-primary-red1: rgba(255, 78, 78);
+
+  --color-primary-blue1: rgba(28, 100, 242, 0.6);
+  --color-primary-blue2: rgba(28, 100, 242, 0.8);
+  --color-primary-blue3: rgb(28 100 242);
+  --color-primary-blue4: rgb(30 66 159);
+
+  --xx-small: 0.25rem;
+  --x-small: 0.5rem;
+  --small: 0.75rem;
+  --medium: 1rem;
+  --large: 1.25rem;
+  --x-large: 1.5rem;
+  --xx-large: 1.75rem;
+  --xxx-large: 2rem;
+
+  color-scheme: light dark;
+  color: var(--color-primary-lightgrey1);
+  background-color: var(--color-primary-gey1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: var(--border-radius-s);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+
+input {
+  padding-inline: 0px;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-primary-gey1);
+    background-color: var(--color-primary-lightgrey1);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

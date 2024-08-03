@@ -1,0 +1,35 @@
+.button {
+  min-height: 32px;
+  width: 100%;
+  padding: var(--xx-small) var(--small);
+  border: none;
+  border-radius: var(--x-small);
+  background: var(--color-primary-blue3);
+  color: var(--color-primary-lightgrey1);
+  font-family: inherit;
+  font-size: var(--medium);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: var(--color-primary-blue2);
+}
+
+.button:active {
+  background: var(--color-primary-blue1);
+}
+
+.button:focus {
+  box-shadow: 0 0 0 1px var(--color-primary-blue2);
+}
+
+.button:disabled {
+  background: var(--color-primary-blue1);
+  cursor: not-allowed;
+}
+
+.button:disabled .button-content {
+  color: var(--app-foreground4);
+  cursor: not-allowed;
+}
