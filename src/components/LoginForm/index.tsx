@@ -23,6 +23,10 @@ const LoginForm: React.FC = () => {
     setShowPassword(!showPassword);
   };
 
+  const onClickLogOut = (): void => {
+    setSuccess("");
+  };
+
   useEffect(() => {
     if(!email && !password) {
       setSuccess("");
@@ -42,11 +46,9 @@ const LoginForm: React.FC = () => {
     setSuccess('');
 
     try {
-      // Here is basic mocked auth, in case you pass true - you recieve Success state,
-      // in case false - error state
-      const response = await fakeApi({ user: { email, password }, success: false});
+      const response = await fakeApi({ user: { email, password }});
 
-      if (response.success) {
+      if (response) {
         setSuccess('Success!');
       } else {
         setError('Authentification error, please try again');
@@ -58,7 +60,7 @@ const LoginForm: React.FC = () => {
 
   return (
     <div className={classes.container}>
-      <form onSubmit={handleSubmit} className={classes.form}>
+      {!success && <form onSubmit={handleSubmit} className={classes.form}>
         <h2>Sign in to your account</h2>
         <Input
           label="Email address:"
@@ -86,6 +88,14 @@ const LoginForm: React.FC = () => {
         {success && <p className={classes.success}>{success}</p>}
         <Button type="submit" className={classes.button}>Sign in</Button>
       </form>
+      }
+      {success && <>
+          <div className={classes.form}>
+            <p className={classes.successDescription}>{`Successfully logged in user: ${email}`}</p>
+            <Button onClick={onClickLogOut}>Log out</Button>
+          </div>
+        </>
+      }
     </div>
   );
 };
